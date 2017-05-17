@@ -37,6 +37,9 @@ You can navigate the main menu and game over screen with either the arrow keys/e
 I wrote everything in notepad++ using tabs and my tab length isn't the same as github's viewer. 
 In the future maybe I'll switch to spaces, but I guarantee my style isn't actually that level of illegible.
 
+#### Why didn't you use dynamic memory?
+I didn't use dynamic memory because normally the OS handles a lot of it and it would've been as much work as the whole game to write it myself.
+
 #### Why are there so few commits?
 This project originally used SVN for source control, but I decided once it was done to put it here.
 
