@@ -1,16 +1,16 @@
 /*
-Names: 	Joel v
-		Kieran K
+Names:  Joel v
+        Kieran K
 
 Module: Model 
 
 Purpose: The model module is used for all of the structures that are 
-		contained within the model of the game, and the functions that directly
-		impact the model. 
+        contained within the model of the game, and the functions that directly
+        impact the model. 
 
 Details: The model is not responsible for updating the position of objects within the
-		model, and the model functions should only be used when the appropriate 
-		asynchronous command is given by the user. 
+        model, and the model functions should only be used when the appropriate 
+        asynchronous command is given by the user. 
 */
 
 #ifndef MODEL_H
@@ -139,95 +139,95 @@ enum ObstacleType {bale, cactus, vulture};
 
 struct Arsh
 {
-	int x1, y1; /* top left of hitbox */
-	int x2, y2; /* bottom right of hitbox */
-	int xSprite; /* top left of sprite */
-	int timeInState;
-	int yVelocity;
-	enum ArshState state;
-	UINT8 alive;
-	UINT8 skin;
+    int x1, y1; /* top left of hitbox */
+    int x2, y2; /* bottom right of hitbox */
+    int xSprite; /* top left of sprite */
+    int timeInState;
+    int yVelocity;
+    enum ArshState state;
+    UINT8 alive;
+    UINT8 skin;
 };
 
 struct Obstacle
 {
-	enum ObstacleType type;
-	int x1, y1; /* top left of hitbox */
-	int x2, y2; /* bottom right of hitbox */
-	UINT8 velocity;
-	UINT8 kickable;
-	UINT8 kicked;
-	UINT8 enabled;
+    enum ObstacleType type;
+    int x1, y1; /* top left of hitbox */
+    int x2, y2; /* bottom right of hitbox */
+    UINT8 velocity;
+    UINT8 kickable;
+    UINT8 kicked;
+    UINT8 enabled;
 };
 
 struct ScoreBox
 {
-	int x, y; /* top left of sprite */
+    int x, y; /* top left of sprite */
 };
 
 struct Score
 {
-	int x, y; /* top left of sprite */
-	int scoreValue;
+    int x, y; /* top left of sprite */
+    int scoreValue;
 };
 
 struct Tumbleweed
 {
-	int x, y; /* top left of sprite */
-	int velocity;
-	UINT8 enabled;
+    int x, y; /* top left of sprite */
+    int velocity;
+    UINT8 enabled;
 };
 
 struct Cloud
 {
-	int x, y; /* top left of sprite */
-	int velocity;
+    int x, y; /* top left of sprite */
+    int velocity;
 };
 
 struct Background
 {
-	int sunX, sunY; /* top left of sun */
-	int stageY;
-	int stageHeight;
+    int sunX, sunY; /* top left of sun */
+    int stageY;
+    int stageHeight;
 };
 
 struct Music
 {
-	int currentNote;
-	UINT8 bChannelActivated;
+    int currentNote;
+    UINT8 bChannelActivated;
 };
 
 struct Model
 {
-	struct Arsh arsh;
-	struct Obstacle obstacles[MAX_OBSTACLES];
-	struct ScoreBox scoreBox;
-	struct Score score;
-	struct Tumbleweed weed;
-	struct Cloud cloud;
-	struct Background background;
-	struct Music music;
-	UINT8 spawnRate;
-	UINT8 obstacleVelocity;
+    struct Arsh arsh;
+    struct Obstacle obstacles[MAX_OBSTACLES];
+    struct ScoreBox scoreBox;
+    struct Score score;
+    struct Tumbleweed weed;
+    struct Cloud cloud;
+    struct Background background;
+    struct Music music;
+    UINT8 spawnRate;
+    UINT8 obstacleVelocity;
 };
 
 /* MENU MODEL */
 
 struct Button
 {
-	int x1, y1; /* top left of hitbox */
-	int x2, y2; /* bottom right of hitbox */
+    int x1, y1; /* top left of hitbox */
+    int x2, y2; /* bottom right of hitbox */
 };
 
 struct SelectArrow
 {
-	int x, y; /* top left of sprite */
+    int x, y; /* top left of sprite */
     UINT8 selected; /* which button is currently selected */
 };
 
 struct MenuModel
 {
-	struct Button buttons[MENU_MAX_BUTTONS]; /* the 1-player, 2-player, and quit buttons */ 
+    struct Button buttons[MENU_MAX_BUTTONS]; /* the 1-player, 2-player, and quit buttons */ 
     struct SelectArrow selectArrow; /* the selection arrow */
     int mouseX;
     int mouseY;
@@ -239,9 +239,9 @@ struct MenuModel
 
 struct EndscreenModel
 {
-	struct Button buttons[ENDSCREEN_MAX_BUTTONS]; /* the main menu and quit buttons */
-	struct SelectArrow selectArrow; /* the selection arrow */
-	struct Score finalScore;        /* the final score */
+    struct Button buttons[ENDSCREEN_MAX_BUTTONS]; /* the main menu and quit buttons */
+    struct SelectArrow selectArrow; /* the selection arrow */
+    struct Score finalScore;        /* the final score */
     int mouseX;
     int mouseY;
     int oldMouseX;

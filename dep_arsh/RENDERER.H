@@ -1,14 +1,14 @@
 /*
-Names: 	Joel v
-		Kieran K
+Names:  Joel v
+        Kieran K
 
 Module: Renderer 
 
 Purpose: The renderer module is used for drawing each object of the game to the screen,
-		based off of the various positions, values and states of each object.
+        based off of the various positions, values and states of each object.
 
 Details: The renderer heavily invokes calls from the raster module. The screen base must also
-		be a pointer to a monochrome 640x400 resolution screen.
+        be a pointer to a monochrome 640x400 resolution screen.
 */
 
 #ifndef RENDERER_H

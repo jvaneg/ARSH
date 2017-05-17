@@ -1,11 +1,11 @@
 /*
-Name: 	Joel v
-		Kieran K
-		
+Name:   Joel v
+        Kieran K
+        
 Module: isr
 
 Purpose: contains the functions and typedefs needed to install and operate
-	     interrupt service routines
+         interrupt service routines
 */
 
 #ifndef ISR_H

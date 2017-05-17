@@ -1,6 +1,6 @@
 /*
-Name: 	Joel v
-		Kieran K
+Name:   Joel v
+        Kieran K
 
 Module: Model 
 */
@@ -19,20 +19,20 @@ Output: arsh - the structure containing all player entity data, type Arsh*
 */
 void setArshRun(struct Arsh* arsh)
 {
-	if(arsh->state != run)
-	{
-		arsh->state = run;
-		arsh->timeInState = 0;
-		arsh->yVelocity = 0;
-		
-		arsh->x1 = ARSH_STANDARD_LEFT;
-		arsh->x2 = ARSH_STANDARD_RIGHT;
-		arsh->y1 = ARSH_STANDARD_TOP;
-		arsh->y2 = ARSH_STANDARD_BOTTOM;
-		
-		arsh->xSprite = ARSH_SPRITE_STD_LEFT;
-	}
-	
+    if(arsh->state != run)
+    {
+        arsh->state = run;
+        arsh->timeInState = 0;
+        arsh->yVelocity = 0;
+        
+        arsh->x1 = ARSH_STANDARD_LEFT;
+        arsh->x2 = ARSH_STANDARD_RIGHT;
+        arsh->y1 = ARSH_STANDARD_TOP;
+        arsh->y2 = ARSH_STANDARD_BOTTOM;
+        
+        arsh->xSprite = ARSH_SPRITE_STD_LEFT;
+    }
+    
 }
 
 
@@ -47,14 +47,14 @@ Output: arsh - the structure containing all player entity data, type Arsh*
 */
 void setArshJump(struct Arsh* arsh)
 {
-	if(arsh->state == run)
-	{
-		arsh->state = jump;
-		arsh->timeInState = 0;
-		arsh->yVelocity = 14;
-		startJumpEffect();
-	}
-	
+    if(arsh->state == run)
+    {
+        arsh->state = jump;
+        arsh->timeInState = 0;
+        arsh->yVelocity = 14;
+        startJumpEffect();
+    }
+    
 }
 
 
@@ -69,17 +69,17 @@ Output: arsh - the structure containing all player entity data, type Arsh*
 */
 void setArshSlide(struct Arsh* arsh)
 {
-	if(arsh->state == run)
-	{
-		arsh->state = slide;
-		arsh->timeInState = 0;
-		
-		arsh->y1 = ARSH_SLIDE_TOP;
-		
-		arsh->xSprite = ARSH_SPRITE_SLIDE_LEFT;
-		playSlideEffect();
-	}
-	
+    if(arsh->state == run)
+    {
+        arsh->state = slide;
+        arsh->timeInState = 0;
+        
+        arsh->y1 = ARSH_SLIDE_TOP;
+        
+        arsh->xSprite = ARSH_SPRITE_SLIDE_LEFT;
+        playSlideEffect();
+    }
+    
 }
 /*
 Name: setArshKick
@@ -92,13 +92,13 @@ Output: arsh - the structure containing all player entity data, type Arsh*
 */
 void setArshKick(struct Arsh* arsh)
 {
-	if(arsh->state == run)
-	{
-		arsh->state = kick;
-		arsh->timeInState = 0;
-		
-		arsh->x2 = ARSH_KICK_RIGHT;
-	}
+    if(arsh->state == run)
+    {
+        arsh->state = kick;
+        arsh->timeInState = 0;
+        
+        arsh->x2 = ARSH_KICK_RIGHT;
+    }
 }
 
 
@@ -113,7 +113,7 @@ Output: arsh - the structure containing all player entity data, type Arsh*
 */
 void swapArshSkin(struct Arsh* arsh)
 {
-	arsh->skin = !(arsh->skin);
+    arsh->skin = !(arsh->skin);
 }
 
 

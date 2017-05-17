@@ -3,8 +3,8 @@
 
 #include "types.h"
 
-extern const UINT8 font[];     	/* 8x8 system font */
-extern const UINT8 digits[];	/* 8x12 digit font */
+extern const UINT8 font[];      /* 8x8 system font */
+extern const UINT8 digits[];    /* 8x12 digit font */
 
 #define DIGIT_HEIGHT 12
 #define FONT_HEIGHT 8

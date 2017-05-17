@@ -1,7 +1,7 @@
 /*
-Name: 	Joel v
-		Kieran K
-		
+Name:   Joel v
+        Kieran K
+        
 Module: inputasm
 
 Purpose: Contains the assembly functions used by the input module

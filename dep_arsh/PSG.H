@@ -1,15 +1,15 @@
 /*
-Names: 	Joel v
-		Kieran K
+Names:  Joel v
+        Kieran K
 
 Module: PSG 
 
 Purpose: The PSG module is used for all of the sub-functions that the sound effect and 
-	music module relies on. The module is only responsible for directly interacting with 
-	the PSG registers.
+    music module relies on. The module is only responsible for directly interacting with 
+    the PSG registers.
 
 Details: If you are not already in supervisor mode, you must enter supervisor mode before
-	attempting to make changes to the PSG register.
+    attempting to make changes to the PSG register.
 */
 #ifndef PSG_H
 #define PSG_H

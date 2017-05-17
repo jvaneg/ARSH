@@ -1,11 +1,11 @@
 /*
-Name: 	Joel v
-		Kieran K
-		
+Name:   Joel v
+        Kieran K
+        
 Module: Input
 
 Purpose: Contains the functions related to reading from the ikbd buffer,
-		 and reading/writing from/to the video base register
+         and reading/writing from/to the video base register
 */
 
 #ifndef INPUT_H

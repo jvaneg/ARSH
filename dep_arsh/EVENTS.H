@@ -1,15 +1,15 @@
 /*
-Name: 	Joel v
-		Kieran K
-		
+Name:   Joel v
+        Kieran K
+        
 Module: Events
 
 Purpose: Contains all of the functions related to handling events in the main
-		 game loop.
+         game loop.
 
 Details: Event handlers take place in the main game loop after the model has been
-		 updated in the asynchronous input phase. The event handlers change the game
-		 world based on the asynchronous model changes.
+         updated in the asynchronous input phase. The event handlers change the game
+         world based on the asynchronous model changes.
 */
 
 #ifndef EVENTS_H

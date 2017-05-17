@@ -1,11 +1,11 @@
 /*
-Names: 	Joel v
-		Kieran K
+Names:  Joel v
+        Kieran K
 
 Module: Sound Effects
 
 Purpose: The sound effect module is responsible for controlling creating the awesome sound effects
-	that you head while playing Deputy Arsh. 
+    that you head while playing Deputy Arsh. 
 
 */
 #ifndef SOUND_EF_H

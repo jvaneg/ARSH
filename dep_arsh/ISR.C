@@ -1,7 +1,7 @@
 /*
-Name: 	Joel v
-		Kieran K
-		
+Name:   Joel v
+        Kieran K
+        
 Module: isr
 */
 
@@ -14,21 +14,21 @@ Name: installVector
 Purpose: replaces a TOS ISR with a custom one
 
 Input: num - the number of the vector being replaced, type int
-	   vector - pointer to the function being installed, type Vector
-	   
+       vector - pointer to the function being installed, type Vector
+       
 Return value: orig - the original function that was previously installed at this vector, type Vector
 */
 Vector installVector(int num, Vector vector)
 {
-	Vector orig;
-	Vector *vectp = (Vector*) ((long) num << 2);
-	long oldSsp = Super(0);
-	
-	orig = *vectp;
-	*vectp = vector;
-	
-	Super(oldSsp);
-	return orig;
+    Vector orig;
+    Vector *vectp = (Vector*) ((long) num << 2);
+    long oldSsp = Super(0);
+    
+    orig = *vectp;
+    *vectp = vector;
+    
+    Super(oldSsp);
+    return orig;
 }
 
 
@@ -45,12 +45,12 @@ Details: wrapper for setipl that turns on super
 */
 int maskInterrupt(int mask)
 {
-	int oldIpl;
-	long oldSsp;
-	
-	oldSsp = Super(0);
-	oldIpl = setipl(mask);
-	Super(oldSsp);
-	
-	return oldIpl;
+    int oldIpl;
+    long oldSsp;
+    
+    oldSsp = Super(0);
+    oldIpl = setipl(mask);
+    Super(oldSsp);
+    
+    return oldIpl;
 }

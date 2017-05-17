@@ -1,11 +1,11 @@
 /*
-Name: 	Joel v
-		Kieran K
-		
+Name:   Joel v
+        Kieran K
+        
 Module: Raster
 
 Purpose: Contains all of the functions related to drawing basic shapes, lines,
-		 and bitmaps of various sizes to the screen.
+         and bitmaps of various sizes to the screen.
 
 Details: Assumes the screen is monochromatic, and 640x400 pixels in size.
 */

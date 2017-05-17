@@ -1,52 +1,52 @@
 /*
-Name:	Joel v
-		Kieran K
+Name:   Joel v
+        Kieran K
 
 Module: Deputy Arsh
 
 Purpose: Contains the main game loop and logic for the exciting
-		 western runner hit, Deputy Arsh!
+         western runner hit, Deputy Arsh!
 
 Details:
-	Basic structure of the game loop is as follows:
-	
-		- initialize model
-	
-		- render first frame
-		
-		- set quit = false 
-		
-		- while not quit
-			- if input pending
-				- process async event
-			
-			- if render request 
-				- render updated model
-				
-	Input:
-		Z - Jump
-		X - Kick
-		C - Slide
-		Q - Quit
-		P - (SECRET) Swaps Deputy Arsh with The Bad Bandit
-		
-	Rules:
-		- JUMP over HAYBALES
-		- KICK down CACTI
-		- SLIDE under VULTURES
-		
+    Basic structure of the game loop is as follows:
+    
+        - initialize model
+    
+        - render first frame
+        
+        - set quit = false 
+        
+        - while not quit
+            - if input pending
+                - process async event
+            
+            - if render request 
+                - render updated model
+                
+    Input:
+        Z - Jump
+        X - Kick
+        C - Slide
+        Q - Quit
+        P - (SECRET) Swaps Deputy Arsh with The Bad Bandit
+        
+    Rules:
+        - JUMP over HAYBALES
+        - KICK down CACTI
+        - SLIDE under VULTURES
+        
 Assumptions / Limitations / Known bugs:
-	
-	- 2 Player option generates thousands of images of Paul P instead
-	  of launching 2 Player mode (not sure why this happens, we're working on it)
-	  
-	- Game is not burned onto ROM (no idea how to do this, too hard)
-	
-	- There are moments where the game (and music) will run slightly too fast,
-	  this is because rendering and music is tied to framerate and the framerate
-	  is not always constant. This could be fixed by rescaling all timings and
-	  decoupling the framerate from the game logic, but it was too late by the time
-	  we got to this
+    
+    - 2 Player option generates thousands of images of Paul P instead
+      of launching 2 Player mode (not sure why this happens, we're working on it)
+      
+    - Game is not burned onto ROM (no idea how to do this, too hard)
+    
+    - There are moments where the game (and music) will run slightly too fast,
+      this is because rendering and music is tied to framerate and the framerate
+      is not always constant. This could be fixed by rescaling all timings and
+      decoupling the framerate from the game logic, but it was too late by the time
+      we got to this
 */
 
 #ifndef DEP_ARSH_H

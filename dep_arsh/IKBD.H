@@ -1,14 +1,14 @@
 /*
-Name: 	Joel v
-		Kieran K
-		
+Name:   Joel v
+        Kieran K
+        
 Module: IKBD
 
 Purpose: Contains the functions related to reading mouse and keyboard input,
-		 as well as the global keyboard buffer structure
+         as well as the global keyboard buffer structure
 
 Details: The main IKBD stuff is called from an assembly function which is
-		 installed in place of the atari ikbd isr
+         installed in place of the atari ikbd isr
 */
 
 #ifndef TSTIKBD_H
@@ -26,9 +26,9 @@ Details: The main IKBD stuff is called from an assembly function which is
 
 #define IKBD_ISR 70 /* IKBD ISR is located at vector 70 */
 
-#define IKBD_CTRL 0x00FFFC00	/* IKBD Control register (byte array)*/
-#define IKBD_SR	0x00FFFC00	/* IKBD Status Register (byte array)*/
-#define IKBD_RDR 0x00FFFC02	/* keyboard receive data register */
+#define IKBD_CTRL 0x00FFFC00    /* IKBD Control register (byte array)*/
+#define IKBD_SR 0x00FFFC00  /* IKBD Status Register (byte array)*/
+#define IKBD_RDR 0x00FFFC02 /* keyboard receive data register */
 #define IKBD_SR_INTERRUPT_ON 0x80
 
 
@@ -42,10 +42,10 @@ Details: The main IKBD stuff is called from an assembly function which is
 /* the IKBD buffer, a queue implemented as a circular array */
 struct BufferQueue
 {
-	UINT32 buffer[256];
-	UINT8 head;
-	UINT8 tail;
-	UINT16 fillLevel;
+    UINT32 buffer[256];
+    UINT8 head;
+    UINT8 tail;
+    UINT16 fillLevel;
     int mouseX;
     int mouseY;
 };
