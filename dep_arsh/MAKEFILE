@@ -1,0 +1,61 @@
+dep_arsh: dep_arsh.o raster.o clear_qk.o model.o renderer.o font.o sprites.o sprites2.o input.o events.o psg.o sound_ef.o music.o inputasm.o isr.o israsm.o ikbd.o
+	cc68x -g dep_arsh.o raster.o clear_qk.o model.o renderer.o font.o sprites.o sprites2.o input.o events.o psg.o sound_ef.o music.o inputasm.o isr.o israsm.o ikbd.o -o dep_arsh.tos -f
+
+dep_arsh.o: dep_arsh.c dep_arsh.h renderer.h events.h input.h psg.h isr.h ikbd.h
+	cc68x -g -c dep_arsh.c
+
+ikbd: ikbd.o input.o inputasm.o isr.o israsm.o
+	cc68x -g ikbd.o input.o inputasm.o isr.o israsm.o -o ikbd.tos -f
+
+ikbd.o: ikbd.c ikbd.h input.h isr.h
+	cc68x -g -c ikbd.c
+	
+raster.o: raster.c raster.h font.h
+	cc68x -g -c raster.c
+	
+clear_qk.o: clear_qk.s
+	gen -D -L2 clear_qk.s
+
+psg.o: psg.c psg.h
+	cc68x -g -c psg.c
+	
+sound_ef.o: sound_ef.c sound_ef.h
+	cc68x -g -c sound_ef.c
+	
+music.o: music.c music.h model.h
+	cc68x -g -c music.c	
+	
+model.o: model.c model.h sound_ef.h
+	cc68x -g -c model.c
+
+font.o: font.c font.h
+	cc68x -g -c font.c
+	
+sprites.o: sprites.c sprites.h
+	cc68x -g -c sprites.c
+	
+sprites2.o: sprites2.c sprites2.h
+	cc68x -g -c sprites2.c
+
+renderer.o: renderer.c renderer.h model.h raster.h clear_qk.h
+	cc68x -g -c renderer.c
+
+input.o: input.c input.h inputasm.h
+	cc68x -g -c input.c
+
+events.o: events.c events.h model.h sound_ef.h
+	cc68x -g -c events.c
+	
+inputasm.o: inputasm.s
+	gen -D -L2 inputasm.s
+
+isr.o: isr.c isr.h israsm.h
+	cc68x -g -c isr.c
+	
+israsm.o: israsm.s
+	gen -D -L2 israsm.s
+	
+clean:
+	$(RM) *.o *.tos
+
+all: 	clean dep_arsh
