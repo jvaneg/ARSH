@@ -34,7 +34,7 @@ You can navigate the main menu and game over screen with either the arrow keys/e
 ### FAQ
 
 #### Why are there so few commits?
-This project originally used SVN for source control, but I decided once it was done to put it here.
+This project originally used SVN for source control, but once it was done I decided to put it here.
 
 #### Why didn't you use dynamic memory?
 I didn't use dynamic memory because normally the OS handles a lot of it and it would've been as much work as the whole game to write it myself.
